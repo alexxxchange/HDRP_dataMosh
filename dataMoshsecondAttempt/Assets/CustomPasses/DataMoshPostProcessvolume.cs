@@ -27,7 +27,7 @@ public sealed class DataMoshPostProcessvolume : CustomPostProcessVolumeComponent
 
     // Do not forget to add this post process in the Custom Post Process Orders list (Project Settings > Graphics > HDRP Settings).
     public override CustomPostProcessInjectionPoint injectionPoint => CustomPostProcessInjectionPoint.AfterPostProcess;
-
+    public static Vector2 renderDimensions;
     const string kShaderName = "Hidden/Shader/DataMoshPostProcess";
 
     public override void Setup()
@@ -51,6 +51,8 @@ public sealed class DataMoshPostProcessvolume : CustomPostProcessVolumeComponent
         cmd.Blit(source, destination, m_Material, 0);
 
         cmd.Blit(m_Material.mainTexture, (RenderTexture)_BufferTex);
+
+         renderDimensions =  source.GetScaledSize();
     }
 
     public override void Cleanup()

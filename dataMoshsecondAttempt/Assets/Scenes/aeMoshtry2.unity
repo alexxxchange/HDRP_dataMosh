@@ -8263,6 +8263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 613103905}
   - component: {fileID: 613103906}
+  - component: {fileID: 613103907}
   m_Layer: 0
   m_Name: copypassvolume
   m_TagString: Untagged
@@ -8321,6 +8322,19 @@ MonoBehaviour:
         outputRenderTexture: {fileID: 8400000, guid: 850e338cdc2b2f4488a51a9b8848e3c1, type: 2}
         customCopyShader: {fileID: 4800000, guid: 247f17c56ca52d245890a623d4453c20, type: 3}
         bufferType: 4
+--- !u!114 &613103907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613103903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be7d1825965a8443a2c65e0ba21a82a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bufferTexture: {fileID: 8400000, guid: 9d1960108b068d54bb1f7bdf42803f03, type: 2}
 --- !u!1 &620052161
 GameObject:
   m_ObjectHideFlags: 0
