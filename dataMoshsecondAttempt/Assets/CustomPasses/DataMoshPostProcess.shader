@@ -68,8 +68,6 @@ Shader "Hidden/Shader/DataMoshPostProcess"
        float3 motion = SAMPLE_TEXTURE2D(_CameraMotionVectorTexture, s_linear_clamp_sampler, uvRounded).xyz;
         float3 sourceColor = SAMPLE_TEXTURE2D_X(_MainTex, s_linear_clamp_sampler, input.texcoord).xyz;
 
-    //  float2 motionVectorUVs = float2(input.texcoord.x - motion.r, 1 - input.texcoord.y + motion.g);
-
        float2 motionVectorUVs = float2(input.texcoord.x - motion.r, input.texcoord.y - motion.g);
 
         
